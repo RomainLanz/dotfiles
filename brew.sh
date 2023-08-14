@@ -100,6 +100,7 @@ brew install wget > /dev/null
 brew install bat > /dev/null
 brew install imagemagick > /dev/null
 brew install ffmpeg > /dev/null
+brew install yt-dlp > /dev/null
 success 'Done'
 
 info 'Remove outdated versions from the cellar'
