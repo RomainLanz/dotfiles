@@ -5,6 +5,9 @@ vim.opt.cursorline = true
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
+vim.opt.list = true
+vim.opt.listchars:append "space:⋅"
+vim.opt.listchars:append "eol:↴"
 
 vim.g.mapleader = " "
 
