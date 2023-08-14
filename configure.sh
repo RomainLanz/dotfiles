@@ -19,6 +19,7 @@ osascript -e 'tell application "System Preferences" to quit'
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+# See https://macos-defaults.com/
 # General
 
 sudo nvram SystemAudioVolume=%00
@@ -364,6 +365,9 @@ defaults write com.apple.spotlight orderedItems -array \
   '{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
 success 'Change indexing order and disable some search results'
 
+/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.symbolichotkeys.plist -c "Set AppleSymbolicHotKeys:64:enabled false"
+success 'Disable Spotlight shortcut'
+
 killall mds > /dev/null 2>&1
 success 'Load new settings before rebuilding the index'
 
@@ -436,6 +440,18 @@ success 'Install System data files & security updates'
 
 defaults write com.apple.commerce AutoUpdate -bool true
 success 'Turn on app auto-update'
+
+# RayCast
+
+defaults write com.raycast.macos navigationCommandStyleIdentifierKey -string "vim"
+success 'Use VIM binding for RayCast'
+
+defaults write com.raycast.macos raycastGlobalHotkey -string "Command-49"
+success 'Use CMD+Space to open RayCast'
+
+defaults write com.raycast.macos raycastPreferredTheme -string "raycast-light"
+defaults write com.raycast.macos raycastPreferredWindowMode -string "compact"
+success 'Set styling for RayCast'
 
 for app in "Activity Monitor" "cfprefsd" "Dock" "Finder" "Safari" "SystemUIServer"; do
   killall "${app}" > /dev/null 2>&1
