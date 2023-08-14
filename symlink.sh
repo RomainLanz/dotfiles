@@ -24,7 +24,7 @@ symlinker() {
 
   local overwrite=true overwrite_all=true backup_all=false skip_all=false
 
-  for file in $(find -H "$(pwd)" -maxdepth 3 -name '*.sym'); do
+  for file in $(find -H "$(pwd)" -maxdepth 5 -name '*.sym'); do
     local path=$(grealpath --relative-to=$PWD $file)
     mkdir -p "$HOME/$(dirname $path)"
     local dest="$HOME/$(dirname $path)/$(basename "${file%.*}")"

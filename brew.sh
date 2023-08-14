@@ -36,6 +36,7 @@ if test ! $(which fish); then
   brew install fish > /dev/null
   echo $(which fish) >> /etc/shells
   chsh -s $(which fish)
+  curl -L https://get.oh-my.fish | fish
   success 'Done'
 fi
 

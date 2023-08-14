@@ -18,3 +18,8 @@ end
 function vim
   nvim $argv
 end
+
+function ll
+  ls -la $argv
+end
+
