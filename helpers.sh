@@ -17,16 +17,3 @@ fail() {
   echo ''
   exit $?
 }
-
-symlinker() {
-  info 'Symlinking dotfiles'
-
-  local overwrite=true overwrite_all=true backup_all=false skip_all=false
-
-  for file in $(find -H "$(pwd)" -maxdepth 3 -name '*.symlink'); do
-    local dest="$HOME/.$(basename "${file%.*}")"
-
-    ln -sf "$file" "$dest"
-    success "linked $file to $dest"
-  done
-}
