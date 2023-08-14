@@ -95,7 +95,7 @@ brew install xz > /dev/null
 success 'Done'
 
 info 'Installing other useful binaries'
-brew install pinentry > /dev/null
+brew install pinentry-mac > /dev/null
 brew install ack > /dev/null
 brew install wget > /dev/null
 brew install bat > /dev/null
