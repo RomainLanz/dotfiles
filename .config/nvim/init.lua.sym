@@ -1,0 +1,2 @@
+-- VIM Options
+vim.opt.number = true
