@@ -207,3 +207,7 @@ success 'Done'
 info 'Installing TopNotch'
 brew install topnotch > /dev/null
 success 'Done'
+
+info 'Installing Insomnia'
+brew install insomnia > /dev/null
+success 'Done'
