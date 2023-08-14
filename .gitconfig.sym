@@ -1,0 +1,16 @@
+[user]
+  name = Romain Lanz
+  email = romain.lanz@pm.me
+  signingkey = AA16CC14B3D487B5
+
+[commit]
+  gpgsign = true
+
+[init]
+  defaultBranch = main
+
+[gpg]
+  program = /opt/homebrew/bin/gpg
+
+[core]
+  autocrlf = input
