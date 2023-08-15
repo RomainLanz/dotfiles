@@ -11,6 +11,7 @@ vim.opt.listchars:append "eol:↴"
 
 vim.g.mapleader = " "
 
+
 -- Package Manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
@@ -29,3 +30,9 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Load Plugins
 require("lazy").setup("plugins")
+
+-- Keymaps
+
+vim.keymap.set("n", "<leader>nt", "<CMD>tabnew<CR>", { desc = "New Tab", silent = true })
+vim.keymap.set("n", "<leader>td", "<CMD>tabclose<CR>", { desc = "Close Tab", silent = true }) -- Check the Bufremove configuration
+
