@@ -18,6 +18,7 @@ return {
       ["c++"] = true,
       ["go"] = true,
       ["python"] = true,
+      ["vue"] = true,
     }
   end,
 }
