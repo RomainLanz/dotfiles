@@ -66,7 +66,8 @@ return {
       "taplo",
       "astro",
       "gopls",
-      "rust_analyzer"
+      "rust_analyzer",
+      "volar",
     }
 
     local server_settings = {
