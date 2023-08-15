@@ -18,6 +18,11 @@ return {
   opts = {
     git_status_async = true,
     filesystem = {
+      filtered_items = {
+        visible = true,
+        hide_dotfiles = false,
+        hide_gitignored = true,
+      },
       follow_current_file = true,
       use_libuv_file_watcher = true,
     },
