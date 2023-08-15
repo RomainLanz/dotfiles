@@ -4,7 +4,6 @@ return {
   dependencies = {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
-    "simrat39/rust-tools.nvim", -- Rust Custom LSP
     "hrsh7th/cmp-nvim-lsp", -- LSP completion
   },
 
@@ -13,9 +12,6 @@ return {
     local mason = require("mason")
     local mason_lsp = require("mason-lspconfig")
     local lsp = require("lspconfig")
-
-    -- Language specific
-    local rust_tools = require("rust-tools")
 
     -- Tools
     local cmp_lsp = require("cmp_nvim_lsp")
@@ -66,7 +62,6 @@ return {
       "taplo",
       "astro",
       "gopls",
-      "rust_analyzer",
       "volar",
     }
 
@@ -86,6 +81,9 @@ return {
           keyOrdering = false,
         },
       },
+      ["volar"] = {
+        filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' }
+      }
     }
 
     local server_with_disabled_formatting = {
@@ -144,15 +142,11 @@ return {
     end
 
     for _, server in pairs(servers) do
-      if server == "rust_analyzer" then
-        rust_tools.setup({ tools = { on_initialized = on_attach } })
-      else
       lsp[server].setup({
         capabilities = capabilities,
         on_attach = on_attach,
         settings = server_settings[server],
       })
-      end
     end
   end,
 }
