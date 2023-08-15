@@ -36,3 +36,7 @@ require("lazy").setup("plugins")
 vim.keymap.set("n", "<leader>nt", "<CMD>tabnew<CR>", { desc = "New Tab", silent = true })
 vim.keymap.set("n", "<leader>td", "<CMD>tabclose<CR>", { desc = "Close Tab", silent = true }) -- Check the Bufremove configuration
 
+vim.keymap.set("n", "<S-h>", "<cmd>tabprevious<cr>", { desc = "Prev buffer", silent = true })
+vim.keymap.set("n", "<S-l>", "<cmd>tabnext<cr>", { desc = "Next buffer", silent = true })
+vim.keymap.set("n", "<S-left>", "<cmd>tabprevious<cr>", { desc = "Prev buffer", silent = true })
+vim.keymap.set("n", "<s-right>", "<cmd>tabnext<cr>", { desc = "Next buffer", silent = true })
