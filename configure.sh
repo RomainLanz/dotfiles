@@ -74,7 +74,7 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 success 'Disable press-and-hold for keys in favor of key repeat'
 
 defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
 success 'Set a blazingly fast keyboard repeat rate'
 
 # Energy Saving
