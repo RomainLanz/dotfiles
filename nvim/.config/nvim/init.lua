@@ -1,4 +1,5 @@
 -- VIM Options
+vim.opt.foldmethod = "syntax"
 vim.opt.number = true
 vim.opt.showcmd = true
 vim.opt.cursorline = true
@@ -40,3 +41,5 @@ vim.keymap.set("n", "<S-h>", "<cmd>tabprevious<cr>", { desc = "Prev buffer", sil
 vim.keymap.set("n", "<S-l>", "<cmd>tabnext<cr>", { desc = "Next buffer", silent = true })
 vim.keymap.set("n", "<S-left>", "<cmd>tabprevious<cr>", { desc = "Prev buffer", silent = true })
 vim.keymap.set("n", "<s-right>", "<cmd>tabnext<cr>", { desc = "Next buffer", silent = true })
+
+vim.keymap.set("n", "<leader>rlsp", "<CMD>LspRestart<CR>", { desc = "Restart LSP", silent = true })
