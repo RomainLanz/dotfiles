@@ -64,6 +64,8 @@ brew install fzf > /dev/null
 brew install fd > /dev/null
 brew install lazygit > /dev/null
 brew install ripgrep > /dev/null
+brew install docker > /dev/null
+brew install colima > /dev/null
 success 'Done'
 
 info 'Installing some CTF tools'
