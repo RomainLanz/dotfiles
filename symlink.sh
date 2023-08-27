@@ -20,3 +20,6 @@ stow nvim
 stow fish
 stow kitty
 stow omf
+stow yabai
+stow skhd
+stow ubersicht
