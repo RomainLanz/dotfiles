@@ -66,6 +66,8 @@ brew install lazygit > /dev/null
 brew install ripgrep > /dev/null
 brew install docker > /dev/null
 brew install colima > /dev/null
+brew install kubectl > /dev/null
+brew install derailed/k9s/k9s > /dev/null
 brew install volta > /dev/null
 success 'Done'
 
